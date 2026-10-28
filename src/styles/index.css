@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-ivory font-sans text-ink antialiased; }
+  h1, h2, h3 { @apply font-display text-ink; }
+  :focus-visible { outline: 2px solid theme('colors.rani.500'); outline-offset: 2px; }
+}
+
+@layer components {
+  /* Jaali (lattice) pattern: a quiet Indian motif for dark and light sections */
+  .bg-jaali-dark {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='.10'%3E%3Cpath d='M24 2l22 22-22 22L2 24z'/%3E%3Ccircle cx='24' cy='24' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  }
+  .bg-jaali-light {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48'%3E%3Cg fill='none' stroke='%232F7D55' stroke-opacity='.10'%3E%3Cpath d='M24 2l22 22-22 22L2 24z'/%3E%3Ccircle cx='24' cy='24' r='6'/%3E%3C/g%3E%3C/svg%3E");
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
